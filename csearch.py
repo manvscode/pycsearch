@@ -244,11 +244,6 @@ class DijkstraSearch:
 		lib.dijkstra_iterative_is_done.argtypes = [c_void_p, py_object]
 		return lib.dijkstra_iterative_is_done( self.handle, py_object(found) )
 
-
-
-
-
-
 #  A* Search Algorithm
 #
 #  The A* (pronounced A star) algorithm is essentially Dijkstra's

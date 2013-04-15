@@ -23,9 +23,6 @@ import ctypes
 import sys
 from csearch import AStarSearch
 from csearch import Successors
-import pdb
-
-
 
 class Board:
 	WIDTH  = 3
@@ -66,7 +63,6 @@ class Board:
 			for i in xrange(length - 1, 0, -1):
 				random_index = random.randint( 0, i + 1)
 				chosen = numbers[ random_index ]
-
 				numbers[ random_index ] = numbers[ i ]
 				self.state[ i ] = chosen
 		else:
@@ -127,7 +123,6 @@ class Board:
 	# Draw a game board state. Step 0 implies no moves have
 	# occurred and is our initial board.
 	def draw( self, step ):
-
 		tile = lambda x, y: " " if self.state[Board.WIDTH * y + x] == 0 else self.state[Board.WIDTH * y + x]
 
 		if self.state == None or len(self.state) == 0:
